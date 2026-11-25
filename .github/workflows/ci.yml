@@ -14,4 +14,4 @@ jobs:
         with:
           go-version-file: go.mod
       - run: go vet ./...
-      - run: go build -o opslymd .
+      - run: go build -o opslymd ./cmd/opslymd

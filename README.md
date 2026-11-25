@@ -19,14 +19,14 @@ brew install iaminci/tap/opslymd
 **Go 1.26+:**
 
 ```bash
-go install github.com/iaminci/opslymd@latest
+go install github.com/iaminci/opslymd-cli/cmd/opslymd@latest
 ```
 
 **From source:**
 
 ```bash
-git clone https://github.com/iaminci/opslymd && cd opslymd
-go build -o opslymd .
+git clone https://github.com/iaminci/opslymd-cli && cd opslymd-cli
+go build -o opslymd ./cmd/opslymd
 ```
 
 ## Usage

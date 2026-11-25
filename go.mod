@@ -1,4 +1,4 @@
-module github.com/iaminci/opslymd
+module github.com/iaminci/opslymd-cli
 
 go 1.26.0
 
