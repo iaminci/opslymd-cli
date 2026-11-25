@@ -15,7 +15,7 @@ import (
 )
 
 // version is overridden at build time: go build -ldflags "-X main.version=1.2.3".
-var version = "0.2.1"
+var version = "0.2.2"
 
 const (
 	maxAutoWidth  = 120
