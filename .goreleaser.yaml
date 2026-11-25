@@ -20,3 +20,27 @@ checksum:
 
 changelog:
   use: github
+
+# Updates Formula/opslymd.rb in iaminci/homebrew-tap on every release.
+# Needs a HOMEBREW_TAP_TOKEN secret with write access to that repository.
+brews:
+  - name: opslymd
+    repository:
+      owner: iaminci
+      name: homebrew-tap
+      branch: main
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    directory: Formula
+    homepage: https://github.com/iaminci/opslymd-cli
+    description: Render Markdown in the terminal, like cat but formatted
+    license: MIT
+    commit_author:
+      name: goreleaserbot
+      email: bot@goreleaser.com
+    commit_msg_template: "opslymd {{ .Version }}"
+    test: |
+      assert_match version.to_s, shell_output("#{bin}/opslymd --version")
+      (testpath/"test.md").write("# Title\n\n- [x] done\n")
+      output = shell_output("#{bin}/opslymd --no-color #{testpath}/test.md")
+      assert_match "Title", output
+      assert_match "[x] done", output
