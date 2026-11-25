@@ -1,4 +1,4 @@
-module github.com/iaminci/opsly-md/cli
+module github.com/iaminci/opslymd
 
 go 1.26.0
 
