@@ -10,7 +10,7 @@ Headings, lists, tables, task lists, blockquotes, links, math, footnotes and syn
 
 ## Install
 
-**Homebrew** (once the tap is published):
+**Homebrew:**
 
 ```bash
 brew install iaminci/tap/opslymd
