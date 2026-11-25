@@ -19,14 +19,16 @@ brew install iaminci/tap/opslymd
 **Go 1.26+:**
 
 ```bash
-go install github.com/iaminci/opslymd-cli/cmd/opslymd@latest
+go install github.com/iaminci/opslymd-cli@latest
 ```
+
+`go install` names the binary after the repository, so this installs it as `opslymd-cli`. Rename it to `opslymd`, or use Homebrew or a release binary.
 
 **From source:**
 
 ```bash
 git clone https://github.com/iaminci/opslymd-cli && cd opslymd-cli
-go build -o opslymd ./cmd/opslymd
+go build -o opslymd .
 ```
 
 ## Usage
